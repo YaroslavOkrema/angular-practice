@@ -23,6 +23,7 @@ import { TransactionsTableComponent } from './components/transactions-table/tran
     CategoriesComponent,
     TransactionsFormComponent,
     TransactionsTableComponent,
+    
   ],
   imports: [
     BrowserModule,
