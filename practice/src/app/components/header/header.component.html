@@ -2,7 +2,7 @@
     <div class="container mx-auto grid grid-cols-2 gap-5 justify-between py-4">
         <a href="#"> Logo</a>
 
-        <nav class="justify-end flex">
+        <nav class="justify-end flex" *ngIf="isAuth; else isNotAuth">
             <ul class="flex gap-5 align-center">
                 <li class="text-white/50">
                     <a  routerLink="" routerLinkActive="text-white" [routerLinkActiveOptions]="{ exact: true}">Home</a>
@@ -15,5 +15,11 @@
                 </li>
             </ul>
         </nav>
+        <ng-template #isNotAuth>
+            <ul class="flex items-center gap 4 ml-auto">
+                <li><a routerLink="signup">SignUp</a></li>
+                <li><a routerLink="login">Login</a></li>
+            </ul>
+        </ng-template>
     </div>
 </header>
